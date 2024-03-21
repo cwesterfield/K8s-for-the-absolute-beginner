@@ -10,5 +10,4 @@ Using service, can expose ports like in docker
     1. NODE SIDE:POD SIDE
         1. Node ports have to be 30000-32767
 1. ClusterIP
-    1. 
 1. Loadbalancer
