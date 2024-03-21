@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: myapp-rc
+  labels:
+    app: myapp
+    type: front-end
+spec:
+  # Crucial
+  # like the pod yaml,
+  # but don't need 2nd api and kind
+  template:
+    metadata:
+      name: nginx-2
+      labels:
+        purpose : webserver
+        env : production
+    spec:
+      containers:
+        - name: nginx
+          image: nginx
+  replicas: 3
+  # This creates 3 pods 
