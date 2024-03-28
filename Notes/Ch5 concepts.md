@@ -65,6 +65,8 @@ To delete replica sets `kubectl delete rs $RSNAME`
 
   > Don't update all pods at once
 
+The number of pods that can be unavailable during a rolling update is controlled by the maxUnavailable parameter in the Deployment or StatefulSet configuration. The default value for maxUnavailable is 25%. This means that by default, during a rolling update, Kubernetes will ensure that at most 25% of the desired number of pods are unavailable at any given time.
+
 **Deployment**
 
 A kind of k8s that allows rollbacks, scale changes and pause and resume of changes

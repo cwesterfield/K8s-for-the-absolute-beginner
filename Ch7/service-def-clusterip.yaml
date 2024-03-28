@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: back-end
+spec:
+  type: ClusterIP # is default, but we assign it anyway
+  ports:
+    - port: 80 # service port
+      targetPort: 80 # Port that acn be accessed
+  selector:
+    app: myapp
+    type: back-end

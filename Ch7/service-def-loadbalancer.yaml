@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: myapp-service
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
     - targetPort: 80 # on pod
       port: 80 # Service (required field)
